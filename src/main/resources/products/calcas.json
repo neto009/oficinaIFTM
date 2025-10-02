@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Calça Jeans Skinny Feminina Azul",
+    "category": "Calças",
+    "description": "Calça jeans skinny feminina em tom azul escuro, com elastano para maior conforto e cintura média.",
+    "color": "Azul Escuro",
+    "size": "38",
+    "gender": "Feminino",
+    "price": 149.90,
+    "link": "https://loja.exemplo.com/produtos/calca-jeans-skinny-feminina-azul"
+  },
+  {
+    "name": "Calça Social Masculina Preta",
+    "category": "Calças",
+    "description": "Calça social masculina preta em tecido de alfaiataria, ideal para ambientes formais ou de trabalho.",
+    "color": "Preto",
+    "size": "42",
+    "gender": "Masculino",
+    "price": 189.90,
+    "link": "https://loja.exemplo.com/produtos/calca-social-masculina-preta"
+  },
+  {
+    "name": "Calça Moletom Unissex Cinza",
+    "category": "Calças",
+    "description": "Calça de moletom unissex cinza claro com ajuste em cordão, confortável para uso casual e esportivo.",
+    "color": "Cinza Claro",
+    "size": "M",
+    "gender": "Unissex",
+    "price": 99.90,
+    "link": "https://loja.exemplo.com/produtos/calca-moletom-unissex-cinza"
+  }
+]

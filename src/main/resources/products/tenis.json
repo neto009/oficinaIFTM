@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Tênis de corrida feminino azul",
+    "category": "Tênis",
+    "description": "Tênis leve e confortável, ideal para corridas, tamanho 38, cor azul.",
+    "color": "Azul",
+    "size": "38",
+    "gender": "Feminino",
+    "price": 299.0,
+    "link": "http://loja.com/tenis-corrida-azul"
+  },
+  {
+    "name": "Tênis de corrida masculino preto",
+    "category": "Tênis",
+    "description": "Tênis resistente para corrida de longa distância, tamanho 42, cor preta.",
+    "color": "Preto",
+    "size": "42",
+    "gender": "Masculino",
+    "price": 329.0,
+    "link": "http://loja.com/tenis-corrida-preto"
+  }
+]

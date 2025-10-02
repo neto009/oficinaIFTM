@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Blusa de Frio Feminina Tricot Bege",
+    "category": "Blusas",
+    "description": "Blusa feminina de frio em tricot bege, gola alta, macia e aconchegante para dias frios.",
+    "color": "Bege",
+    "size": "M",
+    "gender": "Feminino",
+    "price": 129.90,
+    "link": "https://loja.exemplo.com/produtos/blusa-de-frio-feminina-tricot-bege"
+  },
+  {
+    "name": "Blusa Moletom Masculina Canguru Azul",
+    "category": "Blusas",
+    "description": "Blusa de moletom masculina azul marinho, com bolso canguru e capuz ajustável.",
+    "color": "Azul Marinho",
+    "size": "G",
+    "gender": "Masculino",
+    "price": 139.90,
+    "link": "https://loja.exemplo.com/produtos/blusa-moletom-masculina-canguru-azul"
+  },
+  {
+    "name": "Blusa Cropped Feminina Rosa",
+    "category": "Blusas",
+    "description": "Blusa cropped feminina em algodão, cor rosa claro, estilo casual moderno.",
+    "color": "Rosa Claro",
+    "size": "P",
+    "gender": "Feminino",
+    "price": 89.90,
+    "link": "https://loja.exemplo.com/produtos/blusa-cropped-feminina-rosa"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Camiseta Básica Masculina Preta",
+    "category": "Camisetas",
+    "description": "Camiseta básica masculina em algodão 100%, cor preta, modelagem slim.",
+    "color": "Preto",
+    "size": "M",
+    "gender": "Masculino",
+    "price": 59.90,
+    "link": "https://loja.exemplo.com/produtos/camiseta-basica-masculina-preta"
+  },
+  {
+    "name": "Camiseta Feminina Estampada Floral",
+    "category": "Camisetas",
+    "description": "Camiseta feminina em algodão, estampa floral colorida, ideal para looks casuais.",
+    "color": "Branca com estampa floral",
+    "size": "P",
+    "gender": "Feminino",
+    "price": 69.90,
+    "link": "https://loja.exemplo.com/produtos/camiseta-feminina-estampada-floral"
+  },
+  {
+    "name": "Camiseta Unissex Branca Oversized",
+    "category": "Camisetas",
+    "description": "Camiseta unissex branca oversized em malha macia, estilo urbano e confortável.",
+    "color": "Branca",
+    "size": "G",
+    "gender": "Unissex",
+    "price": 79.90,
+    "link": "https://loja.exemplo.com/produtos/camiseta-unissex-branca-oversized"
+  }
+]
