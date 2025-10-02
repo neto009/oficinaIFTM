@@ -5,6 +5,7 @@ import br.edu.iftm.agent.dto.Product;
 import br.edu.iftm.agent.dto.ProductEmbedding;
 import br.edu.iftm.agent.service.EmbeddingService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -18,6 +19,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
+@Slf4j
 @SpringBootApplication
 public class AgentApplication implements CommandLineRunner {
 
@@ -61,7 +63,7 @@ public class AgentApplication implements CommandLineRunner {
 				}
 			});
 		}
-		System.out.println("✅ Produtos carregados e embeddados (float[]) na memória.");
+		log.info("Produtos carregados e embeddados na memória.");
 	}
 
 }

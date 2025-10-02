@@ -19,3 +19,4 @@ public class EcommerceController {
         return chatService.ask(request.getQuery(), request.getDistance());
     }
 }
+
