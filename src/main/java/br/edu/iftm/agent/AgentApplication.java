@@ -1,7 +1,9 @@
 package br.edu.iftm.agent;
 
-import br.edu.iftm.agent.config.ProductMemory;
+import br.edu.iftm.agent.config.EmbeddingMemory;
+import br.edu.iftm.agent.dto.DocumentEmbedding;
 import br.edu.iftm.agent.dto.Product;
+import br.edu.iftm.agent.dto.Document;
 import br.edu.iftm.agent.dto.ProductEmbedding;
 import br.edu.iftm.agent.service.EmbeddingService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -12,6 +14,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -28,7 +31,7 @@ public class AgentApplication implements CommandLineRunner {
 	@Autowired
 	private EmbeddingService embeddingService;
 	@Autowired
-	private ProductMemory productMemory;
+	private EmbeddingMemory embeddingMemory;
 
 	public static void main(String[] args) {
 		SpringApplication.run(AgentApplication.class, args);
@@ -55,7 +58,7 @@ public class AgentApplication implements CommandLineRunner {
 
 					// Associa cada embedding ao produto correspondente
 					for (int i = 0; i < products.size(); i++) {
-						productMemory.addEmbedding(new ProductEmbedding(products.get(i), vectors.get(i)));
+						embeddingMemory.addEmbedding(new ProductEmbedding(products.get(i), vectors.get(i)));
 					}
 
 				} catch (IOException e) {
@@ -64,6 +67,25 @@ public class AgentApplication implements CommandLineRunner {
 			});
 		}
 		log.info("Produtos carregados e embeddados na memória.");
-	}
 
+		// Carregamento dos documentos FAQ
+		Path documentResourceDir = Paths.get("src/main/resources/faq");
+		try (Stream<Path> paths = Files.walk(documentResourceDir)) {
+			paths.filter(Files::isRegularFile)
+			.filter(path -> path.toString().endsWith(".txt"))
+			.forEach(path -> {
+				try {
+					String content = Files.readString(path, StandardCharsets.UTF_8);
+					Document document = new Document(content);
+
+					List<float[]> vectors = embeddingService.embed(List.of(content));
+					embeddingMemory.addEmbedding(new DocumentEmbedding(document, vectors.get(0)));
+
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			});
+		}
+		log.info("Documentos carregados e embeddados na memória.");
+	}
 }
