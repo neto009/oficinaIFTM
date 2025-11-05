@@ -2,12 +2,7 @@
 
 ## Testes via cURL
 
-### 1. Verificar Status do Sistema
-```bash
-curl -X GET http://localhost:8080/agent/ecommerce/status
-```
-
-### 2. Buscar Camiseta Masculina
+### 1. Buscar Camiseta Masculina
 ```bash
 curl -X POST http://localhost:8080/agent/ecommerce/chat \
   -H "Content-Type: application/json" \
@@ -17,7 +12,7 @@ curl -X POST http://localhost:8080/agent/ecommerce/chat \
   }'
 ```
 
-### 3. Buscar Tênis para Corrida
+### 2. Buscar Tênis para Corrida
 ```bash
 curl -X POST http://localhost:8080/agent/ecommerce/chat \
   -H "Content-Type: application/json" \
@@ -27,7 +22,7 @@ curl -X POST http://localhost:8080/agent/ecommerce/chat \
   }'
 ```
 
-### 4. Buscar Roupa Feminina
+### 3. Buscar Roupa Feminina
 ```bash
 curl -X POST http://localhost:8080/agent/ecommerce/chat \
   -H "Content-Type: application/json" \
@@ -37,7 +32,7 @@ curl -X POST http://localhost:8080/agent/ecommerce/chat \
   }'
 ```
 
-### 5. Teste com Threshold Alto (Busca Mais Restritiva)
+### 4. Teste com Threshold Alto (Busca Mais Restritiva)
 ```bash
 curl -X POST http://localhost:8080/agent/ecommerce/chat \
   -H "Content-Type: application/json" \
@@ -47,7 +42,7 @@ curl -X POST http://localhost:8080/agent/ecommerce/chat \
   }'
 ```
 
-### 6. Teste com Query Vaga (Threshold Baixo)
+### 5. Teste com Query Vaga (Threshold Baixo)
 ```bash
 curl -X POST http://localhost:8080/agent/ecommerce/chat \
   -H "Content-Type: application/json" \
@@ -55,4 +50,62 @@ curl -X POST http://localhost:8080/agent/ecommerce/chat \
     "query": "Algo confortável para o fim de semana",
     "distance": 0.4
   }'
+```
+
+### 6. FAQ - Segurança de Dados
+```bash
+curl -X POST http://localhost:8080/agent/ecommerce/faq \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "Como funciona a segurança dos dados?",
+    "distance": 0.7
+  }'
+```
+
+### 7. FAQ - Planos de Assinaturas
+```bash
+curl -X POST http://localhost:8080/agent/ecommerce/faq \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "Quais são os planos de assinaturas disponíveis?",
+    "distance": 0.7
+  }'
+```
+
+### 8. FAQ - Suporte e Atendimento
+```bash
+curl -X POST http://localhost:8080/agent/ecommerce/faq \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "Como entro em contato com o suporte?",
+    "distance": 0.6
+  }'
+```
+
+### 9. FAQ - Threshold Alto (Mais Restritivo)
+```bash
+curl -X POST http://localhost:8080/agent/ecommerce/faq \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "Explique as políticas de segurança e privacidade",
+    "distance": 0.9
+  }'
+```
+
+---
+
+## Testes via cURL (Windows cmd.exe)
+
+FAQ - Segurança de Dados (Windows):
+```cmd
+curl -X POST http://localhost:8080/agent/ecommerce/faq ^
+  -H "Content-Type: application/json" ^
+  -d "{\"query\":\"Como funciona a segurança dos dados?\",\"distance\":0.7}"
+```
+
+FAQ - Planos de Assinaturas (Windows):
+```cmd
+curl -X POST http://localhost:8080/agent/ecommerce/faq ^
+  -H "Content-Type: application/json" ^
+  -d "{\"query\":\"Quais são os planos de assinaturas disponíveis?\",\"distance\":0.7}"
 ```
